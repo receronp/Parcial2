@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "8bc2418a-a55e-464c-9228-12f7260f65c6",
+		"name": "Parcial 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Alumno",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{$server}}/alumno",
+					"host": [
+						"{{$server}}"
+					],
+					"path": [
+						"alumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alumno ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{$server}}/alumno/1",
+					"host": [
+						"{{$server}}"
+					],
+					"path": [
+						"alumno",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Eugenio Pineda\",\r\n    \"identificador\": \"A01823906\",\r\n    \"email\": \"eugeniopineda@icloud.com\",\r\n    \"carrera\": \"ISDR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{$server}}/alumno",
+					"host": [
+						"{{$server}}"
+					],
+					"path": [
+						"alumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alumno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"BORRAR ALUMNO\",\r\n    \"identificador\": \"A01823906\",\r\n    \"email\": \"eugeniopineda@icloud.com\",\r\n    \"carrera\": \"ISDR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{$server}}/alumno",
+					"host": [
+						"{{$server}}"
+					],
+					"path": [
+						"alumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alumno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{$server}}/alumno/2",
+					"host": [
+						"{{$server}}"
+					],
+					"path": [
+						"alumno",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "$server",
+			"value": "http://security-dash.3p-io.com:5000",
+			"type": "string"
+		}
+	]
+}
